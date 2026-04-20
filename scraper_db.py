@@ -199,16 +199,8 @@ class Scraper:
                         VALUES (?, ?, ?, ?)""",
                         ("Insert", "Success", f"Inserted page {page['URL']}", date.today()))
 
-            # 4️⃣ Company Insights (placeholder, add after enrichment)
-            # Example insert once you have LLM results:
-            # cursor.execute("""
-            #     INSERT INTO company_insights (company_id, summary, services, industries, target_audience, positioning_tone, ai_maturity_guess, confidence_score, enriched_at)
-            #     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-            #     (company_id, summary, services, industries, audience, tone, maturity, confidence, date.today()))
-
         conn.commit()
         conn.close()
-
 
 
 
